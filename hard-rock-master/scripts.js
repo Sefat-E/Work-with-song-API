@@ -11,6 +11,7 @@ searchButton.addEventListener('click', function() {
       .then(data => {
             
           let firstTen = data.data.slice(0,10);
+          searchList.innerHTML = ' ';
         for (let i = 0; i < firstTen.length; i++) {
             let titleShort = data.data[i];
             let artist =  data.data[i].artist.name;
@@ -34,6 +35,7 @@ searchButton.addEventListener('click', function() {
                 
             
                 searchList.appendChild(result);
+                
 
             }
         })
